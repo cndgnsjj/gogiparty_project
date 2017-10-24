@@ -23,13 +23,13 @@ public class SampleController {
 	@RequestMapping("home")
 	public String SampleIndex(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		
-		logger.info("Sample Index ¿¡ µé¾î¿Ô½À´Ï´Ù.");
+		logger.info("Sample Index ì ‘ì† ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		
 		SampleVo sample = sampleService.getTime();
 		
 		req.setAttribute("serverTime", sample.getTime());
 		req.setAttribute("username", "sample Page");
 		
-		return "/contents/sample/home";
+		return "home.default";
 	}
 }
